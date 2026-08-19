@@ -1,0 +1,21 @@
+# Optional: use PostgreSQL instead of the default local SQLite database.
+# Start with: docker compose up -d
+# Then set DATABASE_URL in backend/.env to:
+#   postgresql://postgres:postgres@localhost:5432/job_automation?schema=public
+# and change the "provider" in backend/prisma/schema.prisma to "postgresql".
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: job_automation
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

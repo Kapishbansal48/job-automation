@@ -1,0 +1,27 @@
+{
+  "firstName": "Rahul",
+  "lastName": "Sharma",
+  "email": "rahul.sharma@example.com",
+  "phone": "+91 9000000000",
+  "location": "Bangalore, India",
+  "linkedin": "https://linkedin.com/in/example",
+  "github": "https://github.com/example",
+  "education": "B.E. Computer Science",
+  "experience": "Fresher",
+  "skills": ["JavaScript", "React", "Node.js", "Python"],
+  "resumePath": "./resume.pdf",
+  "coverLetter": "I am excited to apply for this role. My background in JavaScript, React, Node.js and Python, combined with hands-on project experience, makes me a strong fit for this opportunity.",
+  "defaultAnswers": {
+    "why are you interested": "I'm excited about the opportunity to grow as a software engineer and contribute to impactful products.",
+    "notice period": "Immediate",
+    "work authorization": "Yes",
+    "willing to relocate": "Yes",
+    "employment agreements": "No",
+    "post-employment restrictions": "No",
+    "previously worked at": "No",
+    "previously consulted for": "No",
+    "require sponsorship": "No",
+    "currently located": "Yes",
+    "currently based": "Yes"
+  }
+}

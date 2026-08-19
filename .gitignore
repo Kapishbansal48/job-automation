@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# generated
+backend/dev.db
+backend/prisma/dev.db
+screenshots/*.png
+!screenshots/.gitkeep
+
+.DS_Store

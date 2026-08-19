@@ -1,0 +1,32 @@
+// Prisma schema for the Automated Job Application Dashboard
+// Default datasource is SQLite for zero-setup local development.
+// Swap "provider" to "postgresql" and set DATABASE_URL to a Postgres connection
+// string in .env to run against PostgreSQL instead (matches production stack).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Job {
+  id             String   @id @default(cuid())
+  externalId     String   @unique // Greenhouse job id, used to prevent duplicates
+  title          String
+  company        String
+  location       String
+  description    String
+  jobUrl         String
+  applicationUrl String
+  source         String   @default("greenhouse")
+
+  status         String   @default("NOT_STARTED")
+  failureReason  String?
+  screenshotPath String?
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
