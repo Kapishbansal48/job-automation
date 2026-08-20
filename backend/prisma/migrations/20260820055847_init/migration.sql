@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Job" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "externalId" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "company" TEXT NOT NULL,
@@ -12,8 +12,10 @@ CREATE TABLE "Job" (
     "status" TEXT NOT NULL DEFAULT 'NOT_STARTED',
     "failureReason" TEXT,
     "screenshotPath" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Job_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
